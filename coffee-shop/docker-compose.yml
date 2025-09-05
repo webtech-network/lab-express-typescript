@@ -1,12 +1,12 @@
 services:
     db:
         image: postgres:17
-        container_name: postgres_dev
+        container_name: coffee_shop
         restart: always
         environment:
             POSTGRES_USER: admin
             POSTGRES_PASSWORD: admin123
-            POSTGRES_DB: mydb
+            POSTGRES_DB: cafeteria
         ports:
             - '5432:5432'
         volumes:
