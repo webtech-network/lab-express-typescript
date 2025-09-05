@@ -131,38 +131,16 @@ type Par<T, U> = [T, U];
 function soma(a: number, b: number): number {
   return a + b;
 }
-
-type BinOp = (a: number, b: number) => number;
-const mult: BinOp = (a, b) => a * b;
-
-function parse(valor: string): number;
-function parse(valor: number): number;
-function parse(valor: unknown): number {
-  if (typeof valor === "string") return Number(valor);
-  if (typeof valor === "number") return valor;
-  throw new Error("tipo inválido");
-}
 ```
 
-## 9) Narrowing
-
-```ts
-function printId(id: number | string) {
-  if (typeof id === "string") console.log(id.toUpperCase());
-  else console.log(id.toFixed(2));
-}
-```
-
-- Também via `in`, `instanceof`, discriminated unions
-
-## 10) Tipos especiais
+## 9) Tipos especiais
 
 - `any`: desliga checagem
 - `unknown`: precisa narrowing
 - `never`: nunca retorna ou fluxo impossível
 - `void`: sem retorno significativo
 
-## 11) Generics
+## 10) Generics
 
 ```ts
 function first<T>(arr: T[]): T | undefined {
@@ -177,17 +155,6 @@ type Pair<T = string, U = number> = [T, U];
 function pick<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }
-```
-
-## 12) Utility Types
-
-- `Partial`, `Required`, `Pick`, `Omit`, `Readonly`, `Record`, `Parameters`, `ReturnType`, `NonNullable`
-
-## 13) Enum preferido: objeto + união de literais
-
-```ts
-const Roles = { Admin: "ADMIN", User: "USER" } as const;
-type Role = (typeof Roles)[keyof typeof Roles];
 ```
 
 ## 14) Módulos Node.js
