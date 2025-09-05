@@ -2,19 +2,19 @@
 
 ## 1) O que é Prisma
 
-- Prisma é um **ORM (Object-Relational Mapping)** moderno para Node.js e TypeScript.
-- Permite **interagir com o banco de dados usando TypeScript seguro**, sem precisar escrever SQL manualmente.
-- Prisma é **type-safe**: autocompletar e checagem de tipos no desenvolvimento.
-- Suporta bancos relacionais: PostgreSQL, MySQL/MariaDB, SQLite, SQL Server, CockroachDB.
-- Prisma também tem suporte para MongoDB (experimental/estável dependendo da versão).
+-   Prisma é um **ORM (Object-Relational Mapping)** moderno para Node.js e TypeScript.
+-   Permite **interagir com o banco de dados usando TypeScript seguro**, sem precisar escrever SQL manualmente.
+-   Prisma é **type-safe**: autocompletar e checagem de tipos no desenvolvimento.
+-   Suporta bancos relacionais: PostgreSQL, MySQL/MariaDB, SQLite, SQL Server, CockroachDB.
+-   Prisma também tem suporte para MongoDB (experimental/estável dependendo da versão).
 
 ## 2) Vantagens do Prisma
 
-- **Type-safe queries**: erros de tipo detectados em tempo de compilação.
-- **Migrations integradas**: controle de versões do banco.
-- **Autocompletar e IntelliSense** no VSCode.
-- **Código limpo**, sem SQL inline, fácil manutenção.
-- Escalável para aplicações grandes.
+-   **Type-safe queries**: erros de tipo detectados em tempo de compilação.
+-   **Migrations integradas**: controle de versões do banco.
+-   **Autocompletar e IntelliSense** no VSCode.
+-   **Código limpo**, sem SQL inline, fácil manutenção.
+-   Escalável para aplicações grandes.
 
 ## 3) Componentes do Prisma
 
@@ -73,7 +73,7 @@ npx prisma migrate dev --name init
 
 ```ts
 // src/prismaClient.ts
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 export const prisma = new PrismaClient();
 ```
@@ -82,23 +82,23 @@ Exemplo de uso:
 
 ```ts
 // src/index.ts
-import { prisma } from "./prismaClient";
+import { prisma } from './prismaClient';
 
 async function main() {
-  const user = await prisma.user.create({
-    data: { name: "Artur", email: "artur@example.com" },
-  });
+    const user = await prisma.user.create({
+        data: { name: 'Artur', email: 'artur@example.com' },
+    });
 
-  console.log("Usuário criado:", user);
+    console.log('Usuário criado:', user);
 
-  const users = await prisma.user.findMany();
+    const users = await prisma.user.findMany();
 
-  console.log("Todos usuários:", users);
+    console.log('Todos usuários:', users);
 }
 
 main()
-  .catch(console.error)
-  .finally(async () => await prisma.$disconnect());
+    .catch(console.error)
+    .finally(async () => await prisma.$disconnect());
 ```
 
 ## 9) Prisma Studio
@@ -107,15 +107,15 @@ main()
 npx prisma studio
 ```
 
-- Interface web (`localhost:5555`) para visualizar e editar dados.
+-   Interface web (`localhost:5555`) para visualizar e editar dados.
 
 ## 10) Boas práticas com Prisma
 
-- Use Prisma Client, evite SQL direto.
-- Feche conexões com `$disconnect()`.
-- Use migrations para evoluir banco.
-- Crie instância única de PrismaClient (Singleton).
-- Use tipos gerados para type-safety.
+-   Use Prisma Client, evite SQL direto.
+-   Feche conexões com `$disconnect()`.
+-   Use migrations para evoluir banco.
+-   Crie instância única de PrismaClient (Singleton).
+-   Use tipos gerados para type-safety.
 
 ## 11) Fluxo resumido para começar
 

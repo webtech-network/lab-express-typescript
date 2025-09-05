@@ -6,9 +6,9 @@ Nesta pasta contém materiais teóricos sobre **Express** e **TypeScript**, orga
 
 ## Conteúdo
 
-- Conceitos teóricos sobre **Express.js** e **TypeScript**
-- Exemplos práticos e explicações detalhadas
-- Dicas e boas práticas para desenvolvimento de aplicações Node.js
+-   Conceitos teóricos sobre **Express.js** e **TypeScript**
+-   Exemplos práticos e explicações detalhadas
+-   Dicas e boas práticas para desenvolvimento de aplicações Node.js
 
 ---
 
@@ -20,5 +20,5 @@ Contribuir para o aprendizado dos alunos oferecendo referência teórica estrutu
 
 ## Observações
 
-- O material é focado em fundamentos e boas práticas, sendo complementar à prática de codificação.
-- É recomendado ter conhecimentos básicos de JavaScript para aproveitar melhor o conteúdo.
+-   O material é focado em fundamentos e boas práticas, sendo complementar à prática de codificação.
+-   É recomendado ter conhecimentos básicos de JavaScript para aproveitar melhor o conteúdo.
